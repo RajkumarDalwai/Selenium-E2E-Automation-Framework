@@ -11,21 +11,25 @@ import com.tractorjunction.driver.DriverManager;
 import com.tractorjunction.utils.ConfigReader;
 
 public class BaseTest {
-    
+
     protected ConfigReader config;
     protected String baseUrl;
-    protected boolean runHeadless;
 
     @BeforeMethod
-    @Parameters({"headless"})
-    public void setUp(@Optional("false") String headless) {
-        String browserFromProperty = System.getProperty("browser");
+    @Parameters({"browser", "headless", "gridUrl", "environment"})
+    public void setUp(
+            @Optional("chrome") String browser,
+            @Optional("false") String headless,
+            @Optional("") String gridUrl,
+            @Optional("test") String environment) {
 
-        config = new ConfigReader();
+        boolean runHeadless = Boolean.parseBoolean(headless);
+
+        // Load env-specific config
+        config = new ConfigReader(environment);
         baseUrl = config.getProperty("baseUrl");
-        runHeadless = Boolean.parseBoolean(headless);
 
-        WebDriver driver = DriverFactory.createDriver(runHeadless);
+        WebDriver driver = DriverFactory.createDriver(browser, runHeadless, gridUrl);
         driver.manage().window().maximize();
         DriverManager.setDriver(driver);
     }

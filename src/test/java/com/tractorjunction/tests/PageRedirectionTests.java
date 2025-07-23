@@ -11,11 +11,6 @@ public class PageRedirectionTests extends BaseTest {
 
     private PageRedirectionPage page;
     private LinkValidator validator;
-    
- // ✅ Set runHeadless early via constructor
-    public PageRedirectionTests() {
-        this.runHeadless = true;
-    }
 
     @BeforeClass
     public void setUp() {
