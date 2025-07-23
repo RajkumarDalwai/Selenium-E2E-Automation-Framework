@@ -1,0 +1,524 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 23 07:16:19 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>87 seconds (87936 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tractorjunction.tests.CompareTests.verifyComparisonHeadingIsCorrect()'><b>verifyComparisonHeadingIsCorrect</b><br>Test class: com.tractorjunction.tests.CompareTests</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (515, 474)
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b83fb4b8aa50fe5e5e66b47610514a3b, clickElement {id=f.58B0153AD9513AEF14CEB6C262DC3CE4.d.A000DC99435693924528B7388125FA25.e.120}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62426/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b83fb4b8aa50fe5e5e66b47610514a3b)] -&gt; css selector: a[title=&apos;Compare Tractors&apos;]]
+Session ID: b83fb4b8aa50fe5e5e66b47610514a3b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.ComparePage.clickCompare(ComparePage.java:96)
+	at com.tractorjunction.tests.CompareTests.verifyComparisonHeadingIsCorrect(CompareTests.java:40)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1671985244", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1671985244'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (515, 474)
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b83fb4b8aa50fe5e5e66b47610514a3b, clickElement {id=f.58B0153AD9513AEF14CEB6C262DC3CE4.d.A000DC99435693924528B7388125FA25.e.120}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62426/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b83fb4b8aa50fe5e5e66b47610514a3b)] -&gt; css selector: a[title=&apos;Compare Tractors&apos;]]
+Session ID: b83fb4b8aa50fe5e5e66b47610514a3b
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.ComparePage.clickCompare(ComparePage.java:96)
+	at com.tractorjunction.tests.CompareTests.verifyComparisonHeadingIsCorrect(CompareTests.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>12</td>
+<td>com.tractorjunction.tests.CompareTests@6b0d80ed</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.LanguageSwitcherTests.testLanguageSwitchingFunctionality()'><b>testLanguageSwitchingFunctionality</b><br>Test class: com.tractorjunction.tests.LanguageSwitcherTests</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8fd0ecbd12518de2e62164aed9d9c082, clickElement {id=f.2AC9D5A6F461E641B3352C098B173719.d.E3F7902404ED15D5899490C35B118134.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61658/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8fd0ecbd12518de2e62164aed9d9c082)] -&gt; id: lang-mobile-btn]
+Session ID: 8fd0ecbd12518de2e62164aed9d9c082
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.LanguageSwitcherPage.openLanguageDropdown(LanguageSwitcherPage.java:34)
+	at com.tractorjunction.tests.LanguageSwitcherTests.testLanguageSwitchingFunctionality(LanguageSwitcherTests.java:22)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1535432017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1535432017'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8fd0ecbd12518de2e62164aed9d9c082, clickElement {id=f.2AC9D5A6F461E641B3352C098B173719.d.E3F7902404ED15D5899490C35B118134.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61658/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8fd0ecbd12518de2e62164aed9d9c082)] -&gt; id: lang-mobile-btn]
+Session ID: 8fd0ecbd12518de2e62164aed9d9c082
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.LanguageSwitcherPage.openLanguageDropdown(LanguageSwitcherPage.java:34)
+	at com.tractorjunction.tests.LanguageSwitcherTests.testLanguageSwitchingFunctionality(LanguageSwitcherTests.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>com.tractorjunction.tests.LanguageSwitcherTests@264f218</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.EMICalculatorTests.TC_001_verifyEmiCalculationWithDefaultDownPayment()'><b>TC_001_verifyEmiCalculationWithDefaultDownPayment</b><br>Test class: com.tractorjunction.tests.EMICalculatorTests</td>
+<td><div><pre>java.lang.AssertionError: ❌ EMI mismatch expected [₹ 22,795] but found [₹ 00]
+	at com.tractorjunction.tests.EMICalculatorTests.TC_001_verifyEmiCalculationWithDefaultDownPayment(EMICalculatorTests.java:42)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace762141978", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace762141978'><pre>java.lang.AssertionError: ❌ EMI mismatch expected [₹ 22,795] but found [₹ 00]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.tractorjunction.tests.EMICalculatorTests.TC_001_verifyEmiCalculationWithDefaultDownPayment(EMICalculatorTests.java:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>11</td>
+<td>com.tractorjunction.tests.EMICalculatorTests@928763c</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SearchTests.testSearchFunctionality()'><b>testSearchFunctionality</b><br>Test class: com.tractorjunction.tests.SearchTests</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [960b11b419e23f5d2bc579a17b89884a, clickElement {id=f.D5F115169B2817C84432E232554E5A80.d.934863BCC22AB86E20C6428ADFD2307D.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61833/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (960b11b419e23f5d2bc579a17b89884a)] -&gt; id: serachInt_fields]
+Session ID: 960b11b419e23f5d2bc579a17b89884a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+	at com.tractorjunction.tests.SearchTests.testSearchFunctionality(SearchTests.java:26)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1710814387", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1710814387'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [960b11b419e23f5d2bc579a17b89884a, clickElement {id=f.D5F115169B2817C84432E232554E5A80.d.934863BCC22AB86E20C6428ADFD2307D.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61833/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (960b11b419e23f5d2bc579a17b89884a)] -&gt; id: serachInt_fields]
+Session ID: 960b11b419e23f5d2bc579a17b89884a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+	at com.tractorjunction.tests.SearchTests.testSearchFunctionality(SearchTests.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>13</td>
+<td>com.tractorjunction.tests.SearchTests@7975d1d8</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SearchTests.testInvalidSearchShowsNoSuggestionsMessage()'><b>testInvalidSearchShowsNoSuggestionsMessage</b><br>Test class: com.tractorjunction.tests.SearchTests</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e08559c3ad2e3d401ee9e09d44c5779, clickElement {id=f.3D6EDBCCF7B2D8967C488BE82EE3D228.d.E4FE459FBB93C3074E739993366CFF2A.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61656}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61656/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e08559c3ad2e3d401ee9e09d44c5779)] -&gt; id: serachInt_fields]
+Session ID: 4e08559c3ad2e3d401ee9e09d44c5779
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+	at com.tractorjunction.tests.SearchTests.testInvalidSearchShowsNoSuggestionsMessage(SearchTests.java:44)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace647930272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace647930272'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e08559c3ad2e3d401ee9e09d44c5779, clickElement {id=f.3D6EDBCCF7B2D8967C488BE82EE3D228.d.E4FE459FBB93C3074E739993366CFF2A.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61656}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61656/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e08559c3ad2e3d401ee9e09d44c5779)] -&gt; id: serachInt_fields]
+Session ID: 4e08559c3ad2e3d401ee9e09d44c5779
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+	at com.tractorjunction.tests.SearchTests.testInvalidSearchShowsNoSuggestionsMessage(SearchTests.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>6</td>
+<td>com.tractorjunction.tests.SearchTests@7975d1d8</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.LoginTests.testValidLogin()'><b>testValidLogin</b><br>Test class: com.tractorjunction.tests.LoginTests</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .new-btn (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62245/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae76b7eb4b2538a859311ca589e6ba70
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.tractorjunction.tests.LoginTests.testValidLogin(LoginTests.java:25)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523960107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1523960107'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .new-btn (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62245/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae76b7eb4b2538a859311ca589e6ba70
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.tractorjunction.tests.LoginTests.testValidLogin(LoginTests.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>19</td>
+<td>com.tractorjunction.tests.LoginTests@452e19ca</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tractorjunction.tests.SeoElementsTests.test01_H1Validation()'><b>test01_H1Validation</b><br>Test class: com.tractorjunction.tests.SeoElementsTests<br>Parameters: mr, {"breadcrumb":"मुख्यपृष्ठ > भारतात ट्रॅक्टर्स सब्सिडी > मध्य प्रदेश सब्सिडी योजना","meta":{"keywords":"ट्रॅक्टर सबसिडी, ट्रॅक्टर सबसिडी योजना, ट्रॅक्टर सबसिडी, शेतकरी सबसिडी, हार्वेस्टर सबसिडी, अंमलबजावणी सबसिडी, ट्रॅक्टर सबसिडी बातम्या","description":"येथे मध्य प्रदेश सबसिडी योजना 2025, मध्य प्रदेश मधील शेती सहाय्यक, मध्य प्रदेश मधील हार्वेस्टर सबसिडी व मध्य प्रदेश मधील कृषीसाठी मध्य प्रदेश कृषि सबसिडी योजना, ट्रॅक्टर जंक्शन येथे मिळवा.","title":"मध्य प्रदेश सबसिडी योजना 2025, मध्य प्रदेश कृषी अनुदान योजना"},"h2s":["इतर राज्य अनुदान","इतर राज्य अनुदान बातम्या","मध्य प्रदेश लोकप्रिय ट्रॅक्टर","मध्य प्रदेश मध्ये वापरलेले ट्रॅक्टर","मध्य प्रदेश मधील ट्रॅक्टर विक्रेते आणि सेवा केंद्रे","बद्दल मध्य प्रदेश सब्सिडी योजना","द्रुत दुवे"],"h1":"मध्य प्रदेश सब्सिडी योजना","h3s":["बातमी शोधा","बातम्या श्रेणी","नवीनतम पोस्ट","लोकप्रिय पोस्ट","नवीनतम व्हिडिओ"],"url":"mr\/tractor-subsidy-in-india\/madhya-pradesh\/"}</td>
+<td></td>
+<td>9</td>
+<td>com.tractorjunction.tests.SeoElementsTests@3576ddc2</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SeoElementsTests.test01_H1Validation()'><b>test01_H1Validation</b><br>Test class: com.tractorjunction.tests.SeoElementsTests<br>Parameters: ta, {"breadcrumb":"வீடு > இந்தியாவில் டிராக்டர்கள் மானியம் > மத்திய பிரதேசம் மானியத் திட்டம்","meta":{"keywords":"மத்திய பிரதேசம் மானியம், மத்திய பிரதேசம் மானியத் திட்டம், மத்திய பிரதேசம் டிராக்டர் மானியம், மத்திய பிரதேசம் சாகுபடி மானியம், மத்திய பிரதேசம் ஹார்வெஸ்டர் மானியம், விவசாயத்திற்கான மத்திய பிரதேசம் மானியம்","description":"இங்கே மத்திய பிரதேசம் மானியத் திட்டம் 2025, மத்திய பிரதேசம் சாகுபடி மானியம், மத்திய பிரதேசம் இல் ஹார்வெஸ்டர் மானியம் மற்றும் விவசாயத்திற்கான மத்திய பிரதேசம் இல் சமீபத்திய டிராக்டர் மானியம், டிராக்டர் சந்திப்பில் மத்திய பிரதேசம் விவசாய மானிய திட்டம்.","title":"மத்திய பிரதேசம் மானியத் திட்டம் 2025, மத்திய பிரதேசம் விவசாயத்திற்கான மானியத் திட்டம்"},"h2s":["பிற மாநில மானியம்","பிற மாநில மானியச் செய்திகள்","மத்திய பிரதேசம் பிரபலமான டிராக்டர்","மத்திய பிரதேசம் பயன்படுத்தப்பட்ட டிராக்டர்கள்","மத்திய பிரதேசம் டிராக்டர் டீலர்கள் & சேவை மையங்கள்","பற்றி மத்திய பிரதேசம் மானியத் திட்டம்","விரைவு இணைப்புகள்"],"h1":"மத்திய பிரதேசம் மானியத் திட்டம்","h3s":["செய்திகள் தேடு","செய்தி வகை","சமீபத்திய இடுகைகள்","பிரபலமான பதிவுகள்","சமீபத்திய வீடியோ"],"url":"ta\/tractor-subsidy-in-india\/madhya-pradesh\/"}</td>
+<td></td>
+<td>7</td>
+<td>com.tractorjunction.tests.SeoElementsTests@3576ddc2</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SeoElementsTests.test01_H1Validation()'><b>test01_H1Validation</b><br>Test class: com.tractorjunction.tests.SeoElementsTests<br>Parameters: hi, {"breadcrumb":"होम > भारत में ट्रैक्टर सब्सिडी > मध्य प्रदेश सब्सिडी योजना","meta":{"keywords":"मध्य प्रदेश सब्सिडी, मध्य प्रदेश सब्सिडी योजना, मध्य प्रदेश ट्रैक्टर सब्सिडी, मध्य प्रदेश में कल्टीवेटर सब्सिडी, राजस्थान में हार्वेस्टर सब्सिडी, कृषि के लिए मध्य प्रदेश में सब्सिडी","description":"यहां खोजें मध्य प्रदेश सब्सिडी योजना 2025, मध्य प्रदेश में कल्टीवेटर सब्सिडी, मध्य प्रदेश में हार्वेस्टर सब्सिडी और कृषि के लिए मध्य प्रदेश में नवीनतम ट्रैक्टर सब्सिडी, ट्रैक्टर जंक्शन पर मध्य प्रदेश कृषि सब्सिडी योजना।","title":"मध्य प्रदेश सब्सिडी योजना 2025, कृषि के लिए मध्य प्रदेश सब्सिडी योजना"},"h2s":["अन्य राज्य सब्सिडी","अन्य राज्य सब्सिडी समाचार","मध्य प्रदेश में लोकप्रिय ट्रैक्टर","मध्य प्रदेश में पुराने ट्रैक्टर","मध्य प्रदेश में ट्रैक्टर डीलर और सर्विस सेंटर","मध्य प्रदेश सब्सिडी योजना के बारे में","हमसे शीघ्र जुड़ें"],"h1":"मध्य प्रदेश सब्सिडी योजना","h3s":["समाचार श्रेणी","समाचार श्रेणी","लेटेस्ट पोस्ट","लोकप्रिय पोस्ट","नवीनतम वीडियो"],"url":"hi\/tractor-subsidy-in-india\/madhya-pradesh\/"}</td>
+<td></td>
+<td>12</td>
+<td>com.tractorjunction.tests.SeoElementsTests@3576ddc2</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.CompareTests.verifyScrollToOtherInformationSectionOnTabClick()'><b>verifyScrollToOtherInformationSectionOnTabClick</b><br>Test class: com.tractorjunction.tests.CompareTests</td>
+<td></td>
+<td>8</td>
+<td>com.tractorjunction.tests.CompareTests@6b0d80ed</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.PageRedirectionTests.validateAllLinksOnFooter()'><b>validateAllLinksOnFooter</b><br>Test class: com.tractorjunction.tests.PageRedirectionTests</td>
+<td></td>
+<td>51</td>
+<td>com.tractorjunction.tests.PageRedirectionTests@4c5ae43b</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.LocationMasterTests.validateStates_HomePage_English()'><b>validateStates_HomePage_English</b><br>Test class: com.tractorjunction.tests.LocationMasterTests</td>
+<td></td>
+<td>10</td>
+<td>com.tractorjunction.tests.LocationMasterTests@6f8e8894</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SeoElementsTests.test01_H1Validation()'><b>test01_H1Validation</b><br>Test class: com.tractorjunction.tests.SeoElementsTests<br>Parameters: en, {"breadcrumb":"Home > Tractor Subsidy in India > Madhya Pradesh Subsidy Scheme","meta":{"keywords":"Madhya Pradesh Subsidy, Madhya Pradesh Subsidy Scheme, Madhya Pradesh Tractor Subsidy, Cultivator Subsidy in Madhya Pradesh, Harvester Subsidy in Madhya Pradesh, Subsidy in Madhya Pradesh for Agriculture","description":"Find here Madhya Pradesh Subsidy Scheme 2025, Cultivator Subsidy in Madhya Pradesh, Harvester Subsidy in Madhya Pradesh and latest Tractor Subsidy in Madhya Pradesh for Agriculture, Madhya Pradesh Agriculture Subsidy Scheme at Tractor Junction.","title":"Madhya Pradesh Subsidy Scheme 2025, Madhya Pradesh Subsidy Scheme for Agriculture"},"h2s":["Other State Subsidy","Other State Subsidy News","Popular Tractor in Madhya Pradesh","Used Tractors in Madhya Pradesh","Tractor Dealers & Service Centers in Madhya Pradesh","About Madhya Pradesh Subsidy Scheme","Quick Links"],"h1":"Madhya Pradesh Subsidy Scheme","h3s":["Search News","News Category","Latest Posts","Popular Posts","Latest Videos"],"url":"tractor-subsidy-in-india\/madhya-pradesh\/"}</td>
+<td></td>
+<td>6</td>
+<td>com.tractorjunction.tests.SeoElementsTests@3576ddc2</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.LeadFormTests.TJWA_TC_LNT_001()'><b>TJWA_TC_LNT_001</b><br>Test class: com.tractorjunction.tests.LeadFormTests</td>
+<td></td>
+<td>23</td>
+<td>com.tractorjunction.tests.LeadFormTests@3cfdd820</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.SeoElementsTests.test01_H1Validation()'><b>test01_H1Validation</b><br>Test class: com.tractorjunction.tests.SeoElementsTests<br>Parameters: te, {"breadcrumb":"హోమ్ > భారతదేశంలో ట్రాక్టర్లు సబ్సిడీ > మధ్యప్రదేశ్ సబ్సిడీ పథకం","meta":{"keywords":"మధ్యప్రదేశ్ సబ్సిడీ, మధ్యప్రదేశ్ సబ్సిడీ స్కీమ్, మధ్యప్రదేశ్ ట్రాక్టర్ సబ్సిడీ, మధ్యప్రదేశ్ లో సాగు సబ్సిడీ, మధ్యప్రదేశ్ లో హార్వెస్టర్ సబ్సిడీ, వ్యవసాయం కోసం మధ్యప్రదేశ్ లో సబ్సిడీ","description":"ఇక్కడ కనుగొనండి మధ్యప్రదేశ్ సబ్సిడీ స్కీమ్ 2025, మధ్యప్రదేశ్ లో కల్టివేటర్ సబ్సిడీ, మధ్యప్రదేశ్ లో హార్వెస్టర్ సబ్సిడీ మరియు వ్యవసాయం కోసం మధ్యప్రదేశ్ లో తాజా ట్రాక్టర్ సబ్సిడీ, ట్రాక్టర్ జంక్షన్ వద్ద మధ్యప్రదేశ్ వ్యవసాయ సబ్సిడీ పథకం.","title":"మధ్యప్రదేశ్ సబ్సిడీ పథకం 2025, మధ్యప్రదేశ్ వ్యవసాయం కోసం సబ్సిడీ పథకం"},"h2s":["ఇతర రాష్ట్ర సబ్సిడీ","ఇతర రాష్ట్ర సబ్సిడీ వార్తలు","మధ్యప్రదేశ్ లో ప్రసిద్ధ ట్రాక్టర్","మధ్యప్రదేశ్ లో ఉపయోగించిన ట్రాక్టర్లు","మధ్యప్రదేశ్ లో ట్రాక్టర్ డీలర్లు & సేవా కేంద్రాలు","గురించి మధ్యప్రదేశ్ సబ్సిడీ పథకం","త్వరిత లింకులు"],"h1":"మధ్యప్రదేశ్ సబ్సిడీ పథకం","h3s":["వార్తలను శోధించండి","వార్తల వర్గం","తాజా పోస్ట్లు","జనాదరణ పొందిన పోస్ట్\u200Cలు","తాజా వీడియో"],"url":"te\/tractor-subsidy-in-india\/madhya-pradesh\/"}</td>
+<td></td>
+<td>10</td>
+<td>com.tractorjunction.tests.SeoElementsTests@3576ddc2</td></tr>
+<tr>
+<td title='com.tractorjunction.tests.UsedTractorListingTests.TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange()'><b>TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange</b><br>Test class: com.tractorjunction.tests.UsedTractorListingTests</td>
+<td></td>
+<td>2</td>
+<td>com.tractorjunction.tests.UsedTractorListingTests@1ec9bd38</td></tr>
+</table><p>
+</body>
+</html>

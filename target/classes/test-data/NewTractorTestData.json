@@ -1,0 +1,76 @@
+{
+  "dataSet": [
+    {
+      "mobile": "9740435404",
+      "state": "Karnataka",
+      "district": "Belagavi (Belgaum)",
+      "taluka": "Athni"
+    },
+    {
+      "mobile": "9876543404",
+      "state": "Rajasthan",
+      "district": "Chittorgarh",
+      "taluka": "Chittaurgarh"
+    },
+    {
+      "mobile": "9123456404",
+      "state": "Rajasthan",
+      "district": "Dholpur",
+      "taluka": "Dholpur"
+    },
+    {
+      "mobile": "9876543404",
+      "state": "Maharashtra",
+      "district": "Buldhana",
+      "taluka": "Buldana"
+    },
+    {
+      "mobile": "9567890404",
+      "state": "Punjab",
+      "district": "Barnala",
+      "taluka": "Barnala"
+    },
+    {
+      "mobile": "9898989404",
+      "state": "Haryana",
+      "district": "Panipat",
+      "taluka": "Bapoli"
+    },
+    {
+      "mobile": "9191919404",
+      "state": "Gujarat",
+      "district": "Bhavnagar",
+      "taluka": "Sihor"
+    },
+    {
+      "mobile": "8888888404",
+      "state": "Kerala",
+      "district": "Kannur",
+      "taluka": "Iritty"
+    },
+    {
+      "mobile": "7777777404",
+      "state": "Tamil Nadu",
+      "district": "Coimbatore",
+      "taluka": "Coimbatore North"
+    },
+    {
+      "mobile": "6666666404",
+      "state": "Uttar Pradesh",
+      "district": "Noida",
+      "taluka": "Noida"
+    },
+    {
+      "mobile": "7555555404",
+      "state": "Madhya Pradesh",
+      "district": "Dewas",
+      "taluka": "Chapda"
+    },
+    {
+      "mobile": "8672345404",
+      "state": "गोवा",
+      "district": "साउथ गोवा",
+      "taluka": "पोंडा"
+    }
+  ]
+}

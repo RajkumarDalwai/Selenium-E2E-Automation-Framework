@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="16" passed="10" failed="6" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-23T07:16:19 IST" name="Suite" finished-at="2025-07-23T07:17:46 IST" duration-ms="87936">
+    <groups>
+    </groups>
+    <test started-at="2025-07-23T07:16:19 IST" name="Test" finished-at="2025-07-23T07:17:46 IST" duration-ms="87936">
+      <class name="com.tractorjunction.tests.CompareTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:13 IST" name="setUp" finished-at="2025-07-23T07:17:14 IST" duration-ms="937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyComparisonHeadingIsCorrect()[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:14 IST" name="verifyComparisonHeadingIsCorrect" finished-at="2025-07-23T07:17:27 IST" duration-ms="12277" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (515, 474)
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b83fb4b8aa50fe5e5e66b47610514a3b, clickElement {id=f.58B0153AD9513AEF14CEB6C262DC3CE4.d.A000DC99435693924528B7388125FA25.e.120}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62426/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b83fb4b8aa50fe5e5e66b47610514a3b)] -> css selector: a[title='Compare Tractors']]
+Session ID: b83fb4b8aa50fe5e5e66b47610514a3b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (515, 474)
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b83fb4b8aa50fe5e5e66b47610514a3b, clickElement {id=f.58B0153AD9513AEF14CEB6C262DC3CE4.d.A000DC99435693924528B7388125FA25.e.120}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62426}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62426/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b83fb4b8aa50fe5e5e66b47610514a3b)] -> css selector: a[title='Compare Tractors']]
+Session ID: b83fb4b8aa50fe5e5e66b47610514a3b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+at com.tractorjunction.pages.ComparePage.clickCompare(ComparePage.java:96)
+at com.tractorjunction.tests.CompareTests.verifyComparisonHeadingIsCorrect(CompareTests.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyComparisonHeadingIsCorrect -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:27 IST" name="tearDown" finished-at="2025-07-23T07:17:27 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:27 IST" name="setUp" finished-at="2025-07-23T07:17:28 IST" duration-ms="838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyScrollToOtherInformationSectionOnTabClick()[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:28 IST" name="verifyScrollToOtherInformationSectionOnTabClick" finished-at="2025-07-23T07:17:36 IST" duration-ms="8582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyScrollToOtherInformationSectionOnTabClick -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.CompareTests@6b0d80ed]" started-at="2025-07-23T07:17:36 IST" name="tearDown" finished-at="2025-07-23T07:17:37 IST" duration-ms="263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.CompareTests -->
+      <class name="com.tractorjunction.tests.LanguageSwitcherTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.LanguageSwitcherTests@264f218]" started-at="2025-07-23T07:16:19 IST" name="setUp" finished-at="2025-07-23T07:16:21 IST" duration-ms="2728" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLanguageSwitchingFunctionality()[pri:0, instance:com.tractorjunction.tests.LanguageSwitcherTests@264f218]" started-at="2025-07-23T07:16:22 IST" name="testLanguageSwitchingFunctionality" finished-at="2025-07-23T07:16:28 IST" duration-ms="6524" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8fd0ecbd12518de2e62164aed9d9c082, clickElement {id=f.2AC9D5A6F461E641B3352C098B173719.d.E3F7902404ED15D5899490C35B118134.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61658/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8fd0ecbd12518de2e62164aed9d9c082)] -> id: lang-mobile-btn]
+Session ID: 8fd0ecbd12518de2e62164aed9d9c082]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8fd0ecbd12518de2e62164aed9d9c082, clickElement {id=f.2AC9D5A6F461E641B3352C098B173719.d.E3F7902404ED15D5899490C35B118134.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61658/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8fd0ecbd12518de2e62164aed9d9c082)] -> id: lang-mobile-btn]
+Session ID: 8fd0ecbd12518de2e62164aed9d9c082
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+at com.tractorjunction.pages.LanguageSwitcherPage.openLanguageDropdown(LanguageSwitcherPage.java:34)
+at com.tractorjunction.tests.LanguageSwitcherTests.testLanguageSwitchingFunctionality(LanguageSwitcherTests.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLanguageSwitchingFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.LanguageSwitcherTests@264f218]" started-at="2025-07-23T07:16:28 IST" name="tearDown" finished-at="2025-07-23T07:16:28 IST" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.LanguageSwitcherTests -->
+      <class name="com.tractorjunction.tests.SearchTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:19 IST" name="setUp" finished-at="2025-07-23T07:16:21 IST" duration-ms="2728" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidSearchShowsNoSuggestionsMessage()[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:22 IST" name="testInvalidSearchShowsNoSuggestionsMessage" finished-at="2025-07-23T07:16:28 IST" duration-ms="6573" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e08559c3ad2e3d401ee9e09d44c5779, clickElement {id=f.3D6EDBCCF7B2D8967C488BE82EE3D228.d.E4FE459FBB93C3074E739993366CFF2A.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61656}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61656/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e08559c3ad2e3d401ee9e09d44c5779)] -> id: serachInt_fields]
+Session ID: 4e08559c3ad2e3d401ee9e09d44c5779]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4e08559c3ad2e3d401ee9e09d44c5779, clickElement {id=f.3D6EDBCCF7B2D8967C488BE82EE3D228.d.E4FE459FBB93C3074E739993366CFF2A.e.51}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61656}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61656/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4e08559c3ad2e3d401ee9e09d44c5779)] -> id: serachInt_fields]
+Session ID: 4e08559c3ad2e3d401ee9e09d44c5779
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+at com.tractorjunction.tests.SearchTests.testInvalidSearchShowsNoSuggestionsMessage(SearchTests.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidSearchShowsNoSuggestionsMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:28 IST" name="tearDown" finished-at="2025-07-23T07:16:28 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:28 IST" name="setUp" finished-at="2025-07-23T07:16:29 IST" duration-ms="791" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSearchFunctionality()[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:29 IST" name="testSearchFunctionality" finished-at="2025-07-23T07:16:42 IST" duration-ms="13357" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [960b11b419e23f5d2bc579a17b89884a, clickElement {id=f.D5F115169B2817C84432E232554E5A80.d.934863BCC22AB86E20C6428ADFD2307D.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61833/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (960b11b419e23f5d2bc579a17b89884a)] -> id: serachInt_fields]
+Session ID: 960b11b419e23f5d2bc579a17b89884a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=138.0.7204.159)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [960b11b419e23f5d2bc579a17b89884a, clickElement {id=f.D5F115169B2817C84432E232554E5A80.d.934863BCC22AB86E20C6428ADFD2307D.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61833}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61833/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (960b11b419e23f5d2bc579a17b89884a)] -> id: serachInt_fields]
+Session ID: 960b11b419e23f5d2bc579a17b89884a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+at com.tractorjunction.pages.SearchPage.enterSearchAndSubmit(SearchPage.java:37)
+at com.tractorjunction.tests.SearchTests.testSearchFunctionality(SearchTests.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SearchTests@7975d1d8]" started-at="2025-07-23T07:16:42 IST" name="tearDown" finished-at="2025-07-23T07:16:43 IST" duration-ms="355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.SearchTests -->
+      <class name="com.tractorjunction.tests.UsedTractorListingTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1ec9bd38]" started-at="2025-07-23T07:16:43 IST" name="setUp" finished-at="2025-07-23T07:16:44 IST" duration-ms="860" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1ec9bd38]" started-at="2025-07-23T07:16:44 IST" name="setupPageObject" finished-at="2025-07-23T07:16:57 IST" duration-ms="13070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1ec9bd38]" started-at="2025-07-23T07:16:57 IST" name="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange" finished-at="2025-07-23T07:17:00 IST" duration-ms="2772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1ec9bd38]" started-at="2025-07-23T07:17:00 IST" name="tearDown" finished-at="2025-07-23T07:17:00 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.UsedTractorListingTests -->
+      <class name="com.tractorjunction.tests.SeoElementsTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:28 IST" name="setUp" finished-at="2025-07-23T07:16:29 IST" duration-ms="887" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:29 IST" name="setupPageObject" finished-at="2025-07-23T07:16:29 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="test01_H1Validation(java.lang.String,org.json.simple.JSONObject)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:29 IST" name="test01_H1Validation" data-provider="seoData" finished-at="2025-07-23T07:16:41 IST" duration-ms="12065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"breadcrumb":"होम > भारत में ट्रैक्टर सब्सिडी > मध्य प्रदेश सब्सिडी योजना","meta":{"keywords":"मध्य प्रदेश सब्सिडी, मध्य प्रदेश सब्सिडी योजना, मध्य प्रदेश ट्रैक्टर सब्सिडी, मध्य प्रदेश में कल्टीवेटर सब्सिडी, राजस्थान में हार्वेस्टर सब्सिडी, कृषि के लिए मध्य प्रदेश में सब्सिडी","description":"यहां खोजें मध्य प्रदेश सब्सिडी योजना 2025, मध्य प्रदेश में कल्टीवेटर सब्सिडी, मध्य प्रदेश में हार्वेस्टर सब्सिडी और कृषि के लिए मध्य प्रदेश में नवीनतम ट्रैक्टर सब्सिडी, ट्रैक्टर जंक्शन पर मध्य प्रदेश कृषि सब्सिडी योजना।","title":"मध्य प्रदेश सब्सिडी योजना 2025, कृषि के लिए मध्य प्रदेश सब्सिडी योजना"},"h2s":["अन्य राज्य सब्सिडी","अन्य राज्य सब्सिडी समाचार","मध्य प्रदेश में लोकप्रिय ट्रैक्टर","मध्य प्रदेश में पुराने ट्रैक्टर","मध्य प्रदेश में ट्रैक्टर डीलर और सर्विस सेंटर","मध्य प्रदेश सब्सिडी योजना के बारे में","हमसे शीघ्र जुड़ें"],"h1":"मध्य प्रदेश सब्सिडी योजना","h3s":["समाचार श्रेणी","समाचार श्रेणी","लेटेस्ट पोस्ट","लोकप्रिय पोस्ट","नवीनतम वीडियो"],"url":"hi\/tractor-subsidy-in-india\/madhya-pradesh\/"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_H1Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:41 IST" name="tearDown" finished-at="2025-07-23T07:16:42 IST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:42 IST" name="setUp" finished-at="2025-07-23T07:16:42 IST" duration-ms="853" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:42 IST" name="setupPageObject" finished-at="2025-07-23T07:16:42 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="test01_H1Validation(java.lang.String,org.json.simple.JSONObject)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:42 IST" name="test01_H1Validation" data-provider="seoData" finished-at="2025-07-23T07:16:53 IST" duration-ms="10436" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[te]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"breadcrumb":"హోమ్ > భారతదేశంలో ట్రాక్టర్లు సబ్సిడీ > మధ్యప్రదేశ్ సబ్సిడీ పథకం","meta":{"keywords":"మధ్యప్రదేశ్ సబ్సిడీ, మధ్యప్రదేశ్ సబ్సిడీ స్కీమ్, మధ్యప్రదేశ్ ట్రాక్టర్ సబ్సిడీ, మధ్యప్రదేశ్ లో సాగు సబ్సిడీ, మధ్యప్రదేశ్ లో హార్వెస్టర్ సబ్సిడీ, వ్యవసాయం కోసం మధ్యప్రదేశ్ లో సబ్సిడీ","description":"ఇక్కడ కనుగొనండి మధ్యప్రదేశ్ సబ్సిడీ స్కీమ్ 2025, మధ్యప్రదేశ్ లో కల్టివేటర్ సబ్సిడీ, మధ్యప్రదేశ్ లో హార్వెస్టర్ సబ్సిడీ మరియు వ్యవసాయం కోసం మధ్యప్రదేశ్ లో తాజా ట్రాక్టర్ సబ్సిడీ, ట్రాక్టర్ జంక్షన్ వద్ద మధ్యప్రదేశ్ వ్యవసాయ సబ్సిడీ పథకం.","title":"మధ్యప్రదేశ్ సబ్సిడీ పథకం 2025, మధ్యప్రదేశ్ వ్యవసాయం కోసం సబ్సిడీ పథకం"},"h2s":["ఇతర రాష్ట్ర సబ్సిడీ","ఇతర రాష్ట్ర సబ్సిడీ వార్తలు","మధ్యప్రదేశ్ లో ప్రసిద్ధ ట్రాక్టర్","మధ్యప్రదేశ్ లో ఉపయోగించిన ట్రాక్టర్లు","మధ్యప్రదేశ్ లో ట్రాక్టర్ డీలర్లు & సేవా కేంద్రాలు","గురించి మధ్యప్రదేశ్ సబ్సిడీ పథకం","త్వరిత లింకులు"],"h1":"మధ్యప్రదేశ్ సబ్సిడీ పథకం","h3s":["వార్తలను శోధించండి","వార్తల వర్గం","తాజా పోస్ట్లు","జనాదరణ పొందిన పోస్ట్\u200Cలు","తాజా వీడియో"],"url":"te\/tractor-subsidy-in-india\/madhya-pradesh\/"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_H1Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:53 IST" name="tearDown" finished-at="2025-07-23T07:16:53 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:53 IST" name="setUp" finished-at="2025-07-23T07:16:54 IST" duration-ms="837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:54 IST" name="setupPageObject" finished-at="2025-07-23T07:16:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="test01_H1Validation(java.lang.String,org.json.simple.JSONObject)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:16:54 IST" name="test01_H1Validation" data-provider="seoData" finished-at="2025-07-23T07:17:03 IST" duration-ms="9108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"breadcrumb":"मुख्यपृष्ठ > भारतात ट्रॅक्टर्स सब्सिडी > मध्य प्रदेश सब्सिडी योजना","meta":{"keywords":"ट्रॅक्टर सबसिडी, ट्रॅक्टर सबसिडी योजना, ट्रॅक्टर सबसिडी, शेतकरी सबसिडी, हार्वेस्टर सबसिडी, अंमलबजावणी सबसिडी, ट्रॅक्टर सबसिडी बातम्या","description":"येथे मध्य प्रदेश सबसिडी योजना 2025, मध्य प्रदेश मधील शेती सहाय्यक, मध्य प्रदेश मधील हार्वेस्टर सबसिडी व मध्य प्रदेश मधील कृषीसाठी मध्य प्रदेश कृषि सबसिडी योजना, ट्रॅक्टर जंक्शन येथे मिळवा.","title":"मध्य प्रदेश सबसिडी योजना 2025, मध्य प्रदेश कृषी अनुदान योजना"},"h2s":["इतर राज्य अनुदान","इतर राज्य अनुदान बातम्या","मध्य प्रदेश लोकप्रिय ट्रॅक्टर","मध्य प्रदेश मध्ये वापरलेले ट्रॅक्टर","मध्य प्रदेश मधील ट्रॅक्टर विक्रेते आणि सेवा केंद्रे","बद्दल मध्य प्रदेश सब्सिडी योजना","द्रुत दुवे"],"h1":"मध्य प्रदेश सब्सिडी योजना","h3s":["बातमी शोधा","बातम्या श्रेणी","नवीनतम पोस्ट","लोकप्रिय पोस्ट","नवीनतम व्हिडिओ"],"url":"mr\/tractor-subsidy-in-india\/madhya-pradesh\/"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_H1Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:03 IST" name="tearDown" finished-at="2025-07-23T07:17:03 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:03 IST" name="setUp" finished-at="2025-07-23T07:17:04 IST" duration-ms="981" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:04 IST" name="setupPageObject" finished-at="2025-07-23T07:17:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="test01_H1Validation(java.lang.String,org.json.simple.JSONObject)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:04 IST" name="test01_H1Validation" data-provider="seoData" finished-at="2025-07-23T07:17:11 IST" duration-ms="6776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[en]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"breadcrumb":"Home > Tractor Subsidy in India > Madhya Pradesh Subsidy Scheme","meta":{"keywords":"Madhya Pradesh Subsidy, Madhya Pradesh Subsidy Scheme, Madhya Pradesh Tractor Subsidy, Cultivator Subsidy in Madhya Pradesh, Harvester Subsidy in Madhya Pradesh, Subsidy in Madhya Pradesh for Agriculture","description":"Find here Madhya Pradesh Subsidy Scheme 2025, Cultivator Subsidy in Madhya Pradesh, Harvester Subsidy in Madhya Pradesh and latest Tractor Subsidy in Madhya Pradesh for Agriculture, Madhya Pradesh Agriculture Subsidy Scheme at Tractor Junction.","title":"Madhya Pradesh Subsidy Scheme 2025, Madhya Pradesh Subsidy Scheme for Agriculture"},"h2s":["Other State Subsidy","Other State Subsidy News","Popular Tractor in Madhya Pradesh","Used Tractors in Madhya Pradesh","Tractor Dealers & Service Centers in Madhya Pradesh","About Madhya Pradesh Subsidy Scheme","Quick Links"],"h1":"Madhya Pradesh Subsidy Scheme","h3s":["Search News","News Category","Latest Posts","Popular Posts","Latest Videos"],"url":"tractor-subsidy-in-india\/madhya-pradesh\/"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_H1Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:11 IST" name="tearDown" finished-at="2025-07-23T07:17:11 IST" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:11 IST" name="setUp" finished-at="2025-07-23T07:17:12 IST" duration-ms="949" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:12 IST" name="setupPageObject" finished-at="2025-07-23T07:17:12 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="test01_H1Validation(java.lang.String,org.json.simple.JSONObject)[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:12 IST" name="test01_H1Validation" data-provider="seoData" finished-at="2025-07-23T07:17:20 IST" duration-ms="7585" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ta]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[{"breadcrumb":"வீடு > இந்தியாவில் டிராக்டர்கள் மானியம் > மத்திய பிரதேசம் மானியத் திட்டம்","meta":{"keywords":"மத்திய பிரதேசம் மானியம், மத்திய பிரதேசம் மானியத் திட்டம், மத்திய பிரதேசம் டிராக்டர் மானியம், மத்திய பிரதேசம் சாகுபடி மானியம், மத்திய பிரதேசம் ஹார்வெஸ்டர் மானியம், விவசாயத்திற்கான மத்திய பிரதேசம் மானியம்","description":"இங்கே மத்திய பிரதேசம் மானியத் திட்டம் 2025, மத்திய பிரதேசம் சாகுபடி மானியம், மத்திய பிரதேசம் இல் ஹார்வெஸ்டர் மானியம் மற்றும் விவசாயத்திற்கான மத்திய பிரதேசம் இல் சமீபத்திய டிராக்டர் மானியம், டிராக்டர் சந்திப்பில் மத்திய பிரதேசம் விவசாய மானிய திட்டம்.","title":"மத்திய பிரதேசம் மானியத் திட்டம் 2025, மத்திய பிரதேசம் விவசாயத்திற்கான மானியத் திட்டம்"},"h2s":["பிற மாநில மானியம்","பிற மாநில மானியச் செய்திகள்","மத்திய பிரதேசம் பிரபலமான டிராக்டர்","மத்திய பிரதேசம் பயன்படுத்தப்பட்ட டிராக்டர்கள்","மத்திய பிரதேசம் டிராக்டர் டீலர்கள் & சேவை மையங்கள்","பற்றி மத்திய பிரதேசம் மானியத் திட்டம்","விரைவு இணைப்புகள்"],"h1":"மத்திய பிரதேசம் மானியத் திட்டம்","h3s":["செய்திகள் தேடு","செய்தி வகை","சமீபத்திய இடுகைகள்","பிரபலமான பதிவுகள்","சமீபத்திய வீடியோ"],"url":"ta\/tractor-subsidy-in-india\/madhya-pradesh\/"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_H1Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.SeoElementsTests@3576ddc2]" started-at="2025-07-23T07:17:20 IST" name="tearDown" finished-at="2025-07-23T07:17:20 IST" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.SeoElementsTests -->
+      <class name="com.tractorjunction.tests.LoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.LoginTests@452e19ca]" started-at="2025-07-23T07:17:00 IST" name="setUp" finished-at="2025-07-23T07:17:01 IST" duration-ms="824" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidLogin()[pri:0, instance:com.tractorjunction.tests.LoginTests@452e19ca]" started-at="2025-07-23T07:17:01 IST" name="testValidLogin" finished-at="2025-07-23T07:17:20 IST" duration-ms="19948" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: .new-btn (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62245/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae76b7eb4b2538a859311ca589e6ba70]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .new-btn (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62245/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae76b7eb4b2538a859311ca589e6ba70
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.tractorjunction.tests.LoginTests.testValidLogin(LoginTests.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.LoginTests@452e19ca]" started-at="2025-07-23T07:17:20 IST" name="tearDown" finished-at="2025-07-23T07:17:22 IST" duration-ms="1859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.LoginTests -->
+      <class name="com.tractorjunction.tests.LocationMasterTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.LocationMasterTests@6f8e8894]" started-at="2025-07-23T07:17:20 IST" name="setUp" finished-at="2025-07-23T07:17:21 IST" duration-ms="917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:com.tractorjunction.tests.LocationMasterTests@6f8e8894]" started-at="2025-07-23T07:17:21 IST" name="setUpPage" finished-at="2025-07-23T07:17:21 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="validateStates_HomePage_English()[pri:0, instance:com.tractorjunction.tests.LocationMasterTests@6f8e8894]" started-at="2025-07-23T07:17:21 IST" name="validateStates_HomePage_English" finished-at="2025-07-23T07:17:31 IST" duration-ms="10192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStates_HomePage_English -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.LocationMasterTests@6f8e8894]" started-at="2025-07-23T07:17:31 IST" name="tearDown" finished-at="2025-07-23T07:17:31 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.LocationMasterTests -->
+      <class name="com.tractorjunction.tests.PageRedirectionTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tractorjunction.tests.PageRedirectionTests@4c5ae43b]" started-at="2025-07-23T07:16:19 IST" name="setUp" finished-at="2025-07-23T07:16:19 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.PageRedirectionTests@4c5ae43b]" started-at="2025-07-23T07:16:19 IST" name="setUp" finished-at="2025-07-23T07:16:21 IST" duration-ms="2708" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateAllLinksOnFooter()[pri:0, instance:com.tractorjunction.tests.PageRedirectionTests@4c5ae43b]" started-at="2025-07-23T07:16:22 IST" name="validateAllLinksOnFooter" finished-at="2025-07-23T07:17:13 IST" duration-ms="51525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAllLinksOnFooter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.PageRedirectionTests@4c5ae43b]" started-at="2025-07-23T07:17:13 IST" name="tearDown" finished-at="2025-07-23T07:17:13 IST" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.PageRedirectionTests -->
+      <class name="com.tractorjunction.tests.EMICalculatorTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@928763c]" started-at="2025-07-23T07:17:31 IST" name="setUp" finished-at="2025-07-23T07:17:32 IST" duration-ms="938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC_001_verifyEmiCalculationWithDefaultDownPayment()[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@928763c]" started-at="2025-07-23T07:17:32 IST" name="TC_001_verifyEmiCalculationWithDefaultDownPayment" finished-at="2025-07-23T07:17:43 IST" duration-ms="11133" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[❌ EMI mismatch expected [₹ 22,795] but found [₹ 00]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: ❌ EMI mismatch expected [₹ 22,795] but found [₹ 00]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.tractorjunction.tests.EMICalculatorTests.TC_001_verifyEmiCalculationWithDefaultDownPayment(EMICalculatorTests.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_verifyEmiCalculationWithDefaultDownPayment -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@928763c]" started-at="2025-07-23T07:17:43 IST" name="tearDown" finished-at="2025-07-23T07:17:44 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.EMICalculatorTests -->
+      <class name="com.tractorjunction.tests.LeadFormTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.tractorjunction.tests.LeadFormTests@3cfdd820]" started-at="2025-07-23T07:17:22 IST" name="setUp" finished-at="2025-07-23T07:17:23 IST" duration-ms="897" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TJWA_TC_LNT_001()[pri:0, instance:com.tractorjunction.tests.LeadFormTests@3cfdd820]" started-at="2025-07-23T07:17:23 IST" name="TJWA_TC_LNT_001" finished-at="2025-07-23T07:17:46 IST" duration-ms="23036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_LNT_001 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.LeadFormTests@3cfdd820]" started-at="2025-07-23T07:17:46 IST" name="tearDown" finished-at="2025-07-23T07:17:46 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.LeadFormTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
