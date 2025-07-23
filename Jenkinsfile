@@ -58,17 +58,15 @@ pipeline {
                 }
             }
         }
-
-        stage('Allure Report') {
-            steps {
-                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-            }
-        }
     }
 
     post {
         always {
+            // Publish JUnit results
             junit 'target/surefire-reports/*.xml'
+
+            // Generate Allure Report
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
     }
 }
