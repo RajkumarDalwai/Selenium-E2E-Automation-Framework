@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven'
-        jdk 'JDK21' // Updated to match the configured JDK 21 name
+        maven 'apache-maven-3.9.9'
+        jdk 'JDK21'
     }
     parameters {
         choice(name: 'executionType', choices: ['suite', 'individual'], description: 'Choose suite or specific test class execution')
