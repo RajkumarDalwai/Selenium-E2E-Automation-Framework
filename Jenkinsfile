@@ -30,6 +30,9 @@ pipeline {
         stage('Test Execution') {
             steps {
                 script {
+					// Clean old Allure results
+                    bat 'rmdir /s /q allure-results || echo No allure-results to delete'
+
                     def testNameMap = [
                         'SearchTests': 'com.tractorjunction.tests.SearchTests',
                         'PageRedirectionTests': 'com.tractorjunction.tests.PageRedirectionTests',
