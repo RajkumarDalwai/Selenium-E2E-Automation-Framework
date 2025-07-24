@@ -5,20 +5,8 @@ pipeline {
         jdk 'JDK21'
     }
     parameters {
-        choice(name: 'executionType', choices: ['suite', 'individual'], description: 'Choose suite or specific test class execution')
-        choice(name: 'testSuite', choices: ['smoke', 'regression'], description: 'Test Suite to execute (used if suite selected)')
-        choice(name: 'tests', choices: [
-            'com.tractorjunction.tests.SearchTests',
-            'com.tractorjunction.tests.PageRedirectionTests',
-            'com.tractorjunction.tests.LanguageSwitcherTests',
-            'com.tractorjunction.tests.SeoElementsTests',
-            'com.tractorjunction.tests.UsedTractorListingTests',
-            'com.tractorjunction.tests.LoginTests',
-            'com.tractorjunction.tests.CompareTests',
-            'com.tractorjunction.tests.LocationMasterTests',
-            'com.tractorjunction.tests.LeadFormTests',
-            'com.tractorjunction.tests.EMICalculatorTests'
-        ], description: 'Select the test class to run (used if executionType is individual)')
+        choice(name: 'testSuite', choices: ['None', 'smoke', 'regression'], description: 'Test Suite to execute (select None to skip)')
+        choice(name: 'tests', choices: ['None', 'SearchTests', 'PageRedirectionTests', 'LanguageSwitcherTests', 'SeoElementsTests', 'UsedTractorListingTests', 'LoginTests', 'CompareTests', 'LocationMasterTests', 'LeadFormTests', 'EMICalculatorTests'], description: 'Select the test class to run (select None to skip)')
         choice(name: 'environment', choices: ['test', 'uat', 'prod'], description: 'Environment to run tests on')
         choice(name: 'browser', choices: ['chrome', 'firefox', 'edge'], description: 'Browser to run tests on')
         booleanParam(name: 'headless', defaultValue: true, description: 'Run in headless mode')
@@ -43,7 +31,21 @@ pipeline {
             steps {
                 script {
                     try {
-                        if (params.executionType == 'suite') {
+                        // Map of clean test names to fully qualified names
+                        def testNameMap = [
+                            'SearchTests': 'com.tractorjunction.tests.SearchTests',
+                            'PageRedirectionTests': 'com.tractorjunction.tests.PageRedirectionTests',
+                            'LanguageSwitcherTests': 'com.tractorjunction.tests.LanguageSwitcherTests',
+                            'SeoElementsTests': 'com.tractorjunction.tests.SeoElementsTests',
+                            'UsedTractorListingTests': 'com.tractorjunction.tests.UsedTractorListingTests',
+                            'LoginTests': 'com.tractorjunction.tests.LoginTests',
+                            'CompareTests': 'com.tractorjunction.tests.CompareTests',
+                            'LocationMasterTests': 'com.tractorjunction.tests.LocationMasterTests',
+                            'LeadFormTests': 'com.tractorjunction.tests.LeadFormTests',
+                            'EMICalculatorTests': 'com.tractorjunction.tests.EMICalculatorTests'
+                        ]
+
+                        if (params.testSuite != 'None' && params.tests == 'None') {
                             def suiteXml = "testng/testng-${params.testSuite}.xml"
                             bat """
                                 mvn test ^
@@ -52,14 +54,23 @@ pipeline {
                                     -Dheadless=${params.headless} ^
                                     -Denvironment=${params.environment}
                             """
+                        } else if (params.tests != 'None' && params.testSuite == 'None') {
+                            def fullTestName = testNameMap[params.tests]
+                            if (fullTestName) {
+                                bat """
+                                    mvn test ^
+                                        -Dtest=${fullTestName} ^
+                                        -Dbrowser=${params.browser} ^
+                                        -Dheadless=${params.headless} ^
+                                        -Denvironment=${params.environment}
+                                """
+                            } else {
+                                error "Invalid test name selected: ${params.tests}"
+                            }
+                        } else if (params.testSuite != 'None' && params.tests != 'None') {
+                            error "Cannot run both a test suite and an individual test. Please select only one."
                         } else {
-                            bat """
-                                mvn test ^
-                                    -Dtest=${params.tests} ^
-                                    -Dbrowser=${params.browser} ^
-                                    -Dheadless=${params.headless} ^
-                                    -Denvironment=${params.environment}
-                            """
+                            echo "No tests or test suite selected. Skipping test execution."
                         }
                     } catch (Exception e) {
                         currentBuild.result = 'FAILURE'
