@@ -2,6 +2,8 @@ package com.tractorjunction.pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +16,12 @@ public class SearchPage {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    private By headingLocator = By.tagName("h1"); // Use By locator instead of caching WebElement
+    private By noSuggestionsLocator = By.cssSelector("#messageBoxInner");
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15)); // Increased timeout
         PageFactory.initElements(driver, this);
     }
 
@@ -27,26 +31,24 @@ public class SearchPage {
     @FindBy(id = "searchBox")
     private WebElement searchBox;
 
-    @FindBy(tagName = "h1")
-    private WebElement headingElement;
-
-    @FindBy(css = "#messageBoxInner")
-    private WebElement noSuggestionsSpan;
-
     public void enterSearchAndSubmit(String keywords) {
-        searchField.click(); // activate the input
+        wait.until(ExpectedConditions.elementToBeClickable(searchField));
+        searchField.click(); // Activate the input
+        wait.until(ExpectedConditions.elementToBeClickable(searchBox));
         searchBox.clear();
         searchBox.sendKeys(keywords);
         searchBox.sendKeys(Keys.ENTER);
+        // Wait for page load after submission
+        wait.until(d -> ((JavascriptExecutor) d).executeScript("return document.readyState").equals("complete"));
     }
 
     public String getSearchHeadingText() {
-        wait.until(ExpectedConditions.visibilityOf(headingElement));
+        WebElement headingElement = wait.until(ExpectedConditions.visibilityOfElementLocated(headingLocator));
         return headingElement.getText().trim();
     }
 
     public String getNoSuggestionMessage() {
-        wait.until(ExpectedConditions.visibilityOf(noSuggestionsSpan));
-        return noSuggestionsSpan.getText().trim();
+        WebElement noSuggestionsElement = wait.until(ExpectedConditions.visibilityOfElementLocated(noSuggestionsLocator));
+        return noSuggestionsElement.getText().trim();
     }
 }

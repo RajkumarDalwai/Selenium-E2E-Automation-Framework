@@ -2,7 +2,12 @@ package com.tractorjunction.tests;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,7 +20,7 @@ public class SearchTests extends BaseTest {
 	@Test
 	public void testSearchFunctionality() {
 	    WebDriver driver = getDriver();
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15)); // Increased timeout
 
 	    driver.get(baseUrl); // Load the application
 
@@ -25,13 +30,27 @@ public class SearchTests extends BaseTest {
 	    // Step 1 & 2: Perform search via Page Object method
 	    searchPage.enterSearchAndSubmit("Mahindra 575");
 
-	    // Step 3: Wait until the correct heading appears
-	    wait.until(driver1 -> searchPage.getSearchHeadingText().equals("Mahindra 575 DI SP Plus"));
+	    // Wait for page to be fully loaded
+	    wait.until(d -> ((JavascriptExecutor) d).executeScript("return document.readyState").equals("complete"));
+
+	    // Wait for the heading element to be visible
+	    By headingLocator = By.tagName("h1");
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(headingLocator));
+
+	    // Step 3: Wait until the heading text matches the expected value
+	    wait.until(d -> {
+	        try {
+	            WebElement refreshedHeading = driver.findElement(headingLocator);
+	            return refreshedHeading.getText().trim().equals("Mahindra 575 DI SP Plus");
+	        } catch (StaleElementReferenceException e) {
+	            return false; // Retry if stale element is encountered
+	        }
+	    });
 
 	    // Step 4: Final assertion
-	    Assert.assertEquals(searchPage.getSearchHeadingText(),"Mahindra 575 DI SP Plus","Search result heading mismatch.");
+	    String headingText = driver.findElement(headingLocator).getText().trim();
+	    Assert.assertEquals(headingText, "Mahindra 575 DI SP Plus", "Search result heading mismatch.");
 	}
-
 
 	@Test
 	public void testInvalidSearchShowsNoSuggestionsMessage() {

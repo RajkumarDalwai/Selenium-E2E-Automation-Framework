@@ -30,51 +30,47 @@ pipeline {
         stage('Test Execution') {
             steps {
                 script {
-                    try {
-                        // Map of clean test names to fully qualified names
-                        def testNameMap = [
-                            'SearchTests': 'com.tractorjunction.tests.SearchTests',
-                            'PageRedirectionTests': 'com.tractorjunction.tests.PageRedirectionTests',
-                            'LanguageSwitcherTests': 'com.tractorjunction.tests.LanguageSwitcherTests',
-                            'SeoElementsTests': 'com.tractorjunction.tests.SeoElementsTests',
-                            'UsedTractorListingTests': 'com.tractorjunction.tests.UsedTractorListingTests',
-                            'LoginTests': 'com.tractorjunction.tests.LoginTests',
-                            'CompareTests': 'com.tractorjunction.tests.CompareTests',
-                            'LocationMasterTests': 'com.tractorjunction.tests.LocationMasterTests',
-                            'LeadFormTests': 'com.tractorjunction.tests.LeadFormTests',
-                            'EMICalculatorTests': 'com.tractorjunction.tests.EMICalculatorTests'
-                        ]
+                    def testNameMap = [
+                        'SearchTests': 'com.tractorjunction.tests.SearchTests',
+                        'PageRedirectionTests': 'com.tractorjunction.tests.PageRedirectionTests',
+                        'LanguageSwitcherTests': 'com.tractorjunction.tests.LanguageSwitcherTests',
+                        'SeoElementsTests': 'com.tractorjunction.tests.SeoElementsTests',
+                        'UsedTractorListingTests': 'com.tractorjunction.tests.UsedTractorListingTests',
+                        'LoginTests': 'com.tractorjunction.tests.LoginTests',
+                        'CompareTests': 'com.tractorjunction.tests.CompareTests',
+                        'LocationMasterTests': 'com.tractorjunction.tests.LocationMasterTests',
+                        'LeadFormTests': 'com.tractorjunction.tests.LeadFormTests',
+                        'EMICalculatorTests': 'com.tractorjunction.tests.EMICalculatorTests'
+                    ]
 
-                        if (params.testSuite != 'None' && params.tests == 'None') {
-                            def suiteXml = "testng/testng-${params.testSuite}.xml"
+                    if (params.testSuite != 'None' && params.tests == 'None') {
+                        def suiteXml = "testng/testng-${params.testSuite}.xml"
+                        bat """
+                            mvn test ^
+                                -Psuite ^
+                                -Dtestng.suiteXmlFile=${suiteXml} ^
+                                -Dbrowser=${params.browser} ^
+                                -Denvironment=${params.environment} ^
+                                -Dheadless=${params.headless}
+                        """
+                    } else if (params.tests != 'None' && params.testSuite == 'None') {
+                        def fullTestName = testNameMap[params.tests]
+                        if (fullTestName) {
                             bat """
                                 mvn test ^
-                                    -DsuiteXmlFile=${suiteXml} ^
+                                    -Psingle-test ^
+                                    -Dtest=${fullTestName} ^
                                     -Dbrowser=${params.browser} ^
-                                    -Dheadless=${params.headless} ^
-                                    -Denvironment=${params.environment}
+                                    -Denvironment=${params.environment} ^
+                                    -Dheadless=${params.headless}
                             """
-                        } else if (params.tests != 'None' && params.testSuite == 'None') {
-                            def fullTestName = testNameMap[params.tests]
-                            if (fullTestName) {
-                                bat """
-                                    mvn test ^
-                                        -Dtest=${fullTestName} ^
-                                        -Dbrowser=${params.browser} ^
-                                        -Dheadless=${params.headless} ^
-                                        -Denvironment=${params.environment}
-                                """
-                            } else {
-                                error "Invalid test name selected: ${params.tests}"
-                            }
-                        } else if (params.testSuite != 'None' && params.tests != 'None') {
-                            error "Cannot run both a test suite and an individual test. Please select only one."
                         } else {
-                            echo "No tests or test suite selected. Skipping test execution."
+                            error "Invalid test name selected: ${params.tests}"
                         }
-                    } catch (Exception e) {
-                        currentBuild.result = 'FAILURE'
-                        error "Test execution failed: ${e.message}"
+                    } else if (params.testSuite != 'None' && params.tests != 'None') {
+                        error "Cannot run both a test suite and an individual test. Please select only one."
+                    } else {
+                        echo "No test or suite selected. Skipping test execution."
                     }
                 }
             }

@@ -1,5 +1,6 @@
 package com.tractorjunction.base;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,7 +22,7 @@ public class BaseTest {
             @Optional("chrome") String browser,
             @Optional("false") String headless,
             @Optional("") String gridUrl,
-            @Optional("test") String environment) {
+            @Optional("prod") String environment) {
 
         boolean runHeadless = Boolean.parseBoolean(headless);
 
@@ -30,7 +31,7 @@ public class BaseTest {
         baseUrl = config.getProperty("baseUrl");
 
         WebDriver driver = DriverFactory.createDriver(browser, runHeadless, gridUrl);
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1920, 1080));
         DriverManager.setDriver(driver);
     }
 

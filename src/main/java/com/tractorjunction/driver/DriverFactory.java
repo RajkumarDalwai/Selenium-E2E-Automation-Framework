@@ -27,30 +27,54 @@ public class DriverFactory {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    if (headless) {
-                        chromeOptions.addArguments("--headless=new", "--window-size=1920,1080", "--disable-gpu", "--no-sandbox", "--disable-dev-shm-usage");
-                    }
                     chromeOptions.setAcceptInsecureCerts(true);
+
+                    if (headless) {
+                    	chromeOptions.addArguments(
+                    		    "--headless=new",                       // Use new headless mode
+                    		    "--window-size=1920,1080",              // Set window size
+                    		    "--start-maximized",                    // Also request maximized (for non-headless fallback)
+                    		    "--force-device-scale-factor=1",        // Scale to 100%
+                    		    "--force-color-profile=srgb",           // Color rendering fix
+                    		    "--disable-gpu", 
+                    		    "--no-sandbox", 
+                    		    "--disable-dev-shm-usage",
+                    		    "--remote-allow-origins=*"
+                    		);
+                    } else {
+                        chromeOptions.addArguments("--start-maximized");
+                    }
+
                     driver = getDriver(chromeOptions, gridUrl);
                     break;
 
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.setAcceptInsecureCerts(true);
+
                     if (headless) {
                         firefoxOptions.addArguments("--headless");
+                        firefoxOptions.addArguments("--width=1920", "--height=1080");
                     }
-                    firefoxOptions.setAcceptInsecureCerts(true);
+
                     driver = getDriver(firefoxOptions, gridUrl);
                     break;
 
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     EdgeOptions edgeOptions = new EdgeOptions();
-                    if (headless) {
-                        edgeOptions.addArguments("--headless=new", "--window-size=1920,1080");
-                    }
                     edgeOptions.setAcceptInsecureCerts(true);
+
+                    if (headless) {
+                        edgeOptions.addArguments(
+                            "--headless=new",
+                            "--window-size=1920,1080"
+                        );
+                    } else {
+                        edgeOptions.addArguments("--start-maximized");
+                    }
+
                     driver = getDriver(edgeOptions, gridUrl);
                     break;
 

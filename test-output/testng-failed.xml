@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.tractorjunction.listeners.CustomTestListener"/>
-  </listeners>
-  <test thread-count="3" parallel="classes" name="Test(failed)">
-    <parameter name="headless" value="true"/>
-    <parameter name="environment" value="stage"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="gridUrl" value=""/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tractorjunction.tests.CompareTests">
-        <methods>
-          <include name="verifyComparisonHeadingIsCorrect"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tractorjunction.tests.CompareTests -->
       <class name="com.tractorjunction.tests.LoginTests">
         <methods>
           <include name="testValidLogin"/>
@@ -24,28 +10,6 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.tractorjunction.tests.LoginTests -->
-      <class name="com.tractorjunction.tests.EMICalculatorTests">
-        <methods>
-          <include name="TC_001_verifyEmiCalculationWithDefaultDownPayment"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tractorjunction.tests.EMICalculatorTests -->
-      <class name="com.tractorjunction.tests.SearchTests">
-        <methods>
-          <include name="testInvalidSearchShowsNoSuggestionsMessage"/>
-          <include name="testSearchFunctionality"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tractorjunction.tests.SearchTests -->
-      <class name="com.tractorjunction.tests.LanguageSwitcherTests">
-        <methods>
-          <include name="testLanguageSwitchingFunctionality"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.tractorjunction.tests.LanguageSwitcherTests -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
