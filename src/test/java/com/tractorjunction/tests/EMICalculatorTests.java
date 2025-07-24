@@ -2,6 +2,8 @@ package com.tractorjunction.tests;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -16,10 +18,10 @@ public class EMICalculatorTests extends BaseTest {
     public void TC_001_verifyEmiCalculationWithDefaultDownPayment() {
         getDriver().get(baseUrl + "tractor-loan-emi-calculator/");
         EMICalculatorPage page = new EMICalculatorPage(getDriver());
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(15)); // Increased timeout
 
         // Open brand dropdown
-        page.brandSelect.click();
+        wait.until(ExpectedConditions.elementToBeClickable(page.brandSelect)).click();
         wait.until(ExpectedConditions.visibilityOf(page.firstBrand)).click();
 
         // Select first model
@@ -32,6 +34,11 @@ public class EMICalculatorTests extends BaseTest {
         wait.until(ExpectedConditions.visibilityOf(page.monthlyEMI));
         wait.until(ExpectedConditions.visibilityOf(page.loanAmount));
         wait.until(ExpectedConditions.visibilityOf(page.totalPayable));
+
+        // Additional wait to ensure results are stable
+        wait.until(d -> ((JavascriptExecutor) d).executeScript("return document.readyState").equals("complete"));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(
+            By.cssSelector(".total_emi, #loanAmount, #totalPayable"))); // Target all result elements
 
         // Expected values
         String expectedEMI = "₹ 22,795";
