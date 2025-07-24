@@ -30,7 +30,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
@@ -38,20 +38,20 @@ pipeline {
             steps {
                 script {
                     if (params.executionType == 'suite') {
-                        def suiteXml = "testng/testing-${params.testSuite}.xml"
-                        sh """
-                            mvn test \
-                                -DsuiteXmlFile=${suiteXml} \
-                                -Dbrowser=${params.browser} \
-                                -Dheadless=${params.headless} \
+                        def suiteXml = "testng/testng-${params.testSuite}.xml"
+                        bat """
+                            mvn test ^
+                                -DsuiteXmlFile=${suiteXml} ^
+                                -Dbrowser=${params.browser} ^
+                                -Dheadless=${params.headless} ^
                                 -Denvironment=${params.environment}
                         """
                     } else {
-                        sh """
-                            mvn test \
-                                -Dtest=${params.tests} \
-                                -Dbrowser=${params.browser} \
-                                -Dheadless=${params.headless} \
+                        bat """
+                            mvn test ^
+                                -Dtest=${params.tests} ^
+                                -Dbrowser=${params.browser} ^
+                                -Dheadless=${params.headless} ^
                                 -Denvironment=${params.environment}
                         """
                     }
