@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tractorjunction.tests.LoginTests">
+      <class name="com.tractorjunction.tests.EMICalculatorTests">
         <methods>
-          <include name="testValidLogin"/>
+          <include name="TC_001_verifyEmiCalculationWithDefaultDownPayment"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.tractorjunction.tests.LoginTests -->
+      </class> <!-- com.tractorjunction.tests.EMICalculatorTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

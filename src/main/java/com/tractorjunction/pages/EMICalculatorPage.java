@@ -13,31 +13,27 @@ public class EMICalculatorPage {
         PageFactory.initElements(driver, this);
     }
 
-    // Brand selector dropdown
     @FindBy(css = "#brandselect")
     public WebElement brandSelect;
 
-    // First brand in modal
     @FindBy(xpath = "(//span[contains(@class, 'emi-listing-item') and contains(@class, 'brand')])[1]")
     public WebElement firstBrand;
 
-    // First model under selected brand
     @FindBy(xpath = "(//li[@class='brand-wraaper tractorlisting'])[1]")
     public WebElement firstModel;
 
-    // Calculate EMI button
     @FindBy(xpath = "//span[normalize-space()='Calculate EMI']")
     public WebElement calculateEMIButton;
 
-    // Monthly EMI result
     @FindBy(css = ".total_emi")
     public WebElement monthlyEMI;
 
-    // Loan Amount result
     @FindBy(css = "#loanAmount")
     public WebElement loanAmount;
 
-    // Total Payable result
     @FindBy(css = "#totalPayable")
     public WebElement totalPayable;
+    
+    @FindBy(css = "#downPaymentValue")
+    public WebElement downPayment;
 }
