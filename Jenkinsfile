@@ -7,7 +7,7 @@ pipeline {
     parameters {
         choice(name: 'testSuite', choices: ['None', 'smoke', 'regression'], description: 'Test Suite to execute (select None to skip)')
         choice(name: 'tests', choices: ['None', 'SearchTests', 'PageRedirectionTests', 'LanguageSwitcherTests', 'SeoElementsTests', 'UsedTractorListingTests', 'LoginTests', 'CompareTests', 'LocationMasterTests', 'LeadFormTests', 'EMICalculatorTests'], description: 'Select the test class to run (select None to skip)')
-        choice(name: 'environment', choices: ['test', 'uat', 'prod'], description: 'Environment to run tests on')
+        choice(name: 'environment', choices: ['prod','test', 'uat'], description: 'Environment to run tests on')
         choice(name: 'browser', choices: ['chrome', 'firefox', 'edge'], description: 'Browser to run tests on')
         booleanParam(name: 'headless', defaultValue: true, description: 'Run in headless mode')
     }
