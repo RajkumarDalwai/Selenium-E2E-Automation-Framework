@@ -30,7 +30,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
 
@@ -39,20 +39,20 @@ pipeline {
                 script {
                     if (params.executionType == 'suite') {
                         def suiteXml = "testng/testing-${params.testSuite}.xml"
-                        bat """
-                        mvn test ^
-                            -DsuiteXmlFile=${suiteXml} ^
-                            -Dbrowser=${params.browser} ^
-                            -Dheadless=${params.headless} ^
-                            -Denvironment=${params.environment}
+                        sh """
+                            mvn test \
+                                -DsuiteXmlFile=${suiteXml} \
+                                -Dbrowser=${params.browser} \
+                                -Dheadless=${params.headless} \
+                                -Denvironment=${params.environment}
                         """
                     } else {
-                        bat """
-                        mvn test ^
-                            -Dtest=${params.tests} ^
-                            -Dbrowser=${params.browser} ^
-                            -Dheadless=${params.headless} ^
-                            -Denvironment=${params.environment}
+                        sh """
+                            mvn test \
+                                -Dtest=${params.tests} \
+                                -Dbrowser=${params.browser} \
+                                -Dheadless=${params.headless} \
+                                -Denvironment=${params.environment}
                         """
                     }
                 }
@@ -62,10 +62,10 @@ pipeline {
 
     post {
         always {
-            echo "Publishing JUnit Test Results..."
+            // Publish JUnit results
             junit 'target/surefire-reports/*.xml'
 
-            echo "Generating Allure Report..."
+            // Generate Allure Report
             allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
         }
     }
