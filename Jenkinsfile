@@ -11,6 +11,7 @@ pipeline {
         choice(name: 'browser', choices: ['chrome', 'firefox', 'edge'], description: 'Browser to run tests on')
         booleanParam(name: 'headless', defaultValue: true, description: 'Run in headless mode')
         booleanParam(name: 'runOnGrid', defaultValue: false, description: 'Run tests on Selenium Grid in parallel')
+        string(name: 'threadCount', defaultValue: '3', description: 'Number of threads for parallel execution')
     }
     stages {
         stage('Check Java Version') {
@@ -50,7 +51,7 @@ pipeline {
                     if (params.testSuite != 'None' && params.tests == 'None') {
                         def suiteXml = "testng/testng-${params.testSuite}.xml"
                         def profile = params.runOnGrid ? "grid-parallel" : "suite"
-                        def gridOption = params.runOnGrid ? "-DgridUrl=http://localhost:4444/wd/hub" : ""
+                        def gridOptions = params.runOnGrid ? "-DgridUrl=http://localhost:4444/wd/hub -DthreadCount=${params.threadCount}" : ""
 
                         bat """
                             mvn test ^
@@ -59,7 +60,7 @@ pipeline {
                                 -Dbrowser=${params.browser} ^
                                 -Denvironment=${params.environment} ^
                                 -Dheadless=${params.headless} ^
-                                ${gridOption}
+                                ${gridOptions}
                         """
                     } else if (params.tests != 'None' && params.testSuite == 'None') {
                         def fullTestName = testNameMap[params.tests]
