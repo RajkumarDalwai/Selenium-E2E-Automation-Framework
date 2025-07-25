@@ -7,9 +7,10 @@ pipeline {
     parameters {
         choice(name: 'testSuite', choices: ['None', 'smoke', 'regression'], description: 'Test Suite to execute (select None to skip)')
         choice(name: 'tests', choices: ['None', 'SearchTests', 'PageRedirectionTests', 'LanguageSwitcherTests', 'SeoElementsTests', 'UsedTractorListingTests', 'LoginTests', 'CompareTests', 'LocationMasterTests', 'LeadFormTests', 'EMICalculatorTests'], description: 'Select the test class to run (select None to skip)')
-        choice(name: 'environment', choices: ['prod','test', 'uat'], description: 'Environment to run tests on')
+        choice(name: 'environment', choices: ['prod', 'test', 'uat'], description: 'Environment to run tests on')
         choice(name: 'browser', choices: ['chrome', 'firefox', 'edge'], description: 'Browser to run tests on')
         booleanParam(name: 'headless', defaultValue: true, description: 'Run in headless mode')
+        booleanParam(name: 'runOnGrid', defaultValue: false, description: 'Run tests on Selenium Grid in parallel')
     }
     stages {
         stage('Check Java Version') {
@@ -30,7 +31,7 @@ pipeline {
         stage('Test Execution') {
             steps {
                 script {
-					// Clean old Allure results
+                    // Clean Allure results
                     bat 'rmdir /s /q allure-results || echo No allure-results to delete'
 
                     def testNameMap = [
@@ -48,13 +49,17 @@ pipeline {
 
                     if (params.testSuite != 'None' && params.tests == 'None') {
                         def suiteXml = "testng/testng-${params.testSuite}.xml"
+                        def profile = params.runOnGrid ? "grid-parallel" : "suite"
+                        def gridOption = params.runOnGrid ? "-DgridUrl=http://localhost:4444/wd/hub" : ""
+
                         bat """
                             mvn test ^
-                                -Psuite ^
+                                -P${profile} ^
                                 -Dtestng.suiteXmlFile=${suiteXml} ^
                                 -Dbrowser=${params.browser} ^
                                 -Denvironment=${params.environment} ^
-                                -Dheadless=${params.headless}
+                                -Dheadless=${params.headless} ^
+                                ${gridOption}
                         """
                     } else if (params.tests != 'None' && params.testSuite == 'None') {
                         def fullTestName = testNameMap[params.tests]
@@ -65,7 +70,8 @@ pipeline {
                                     -Dtest=${fullTestName} ^
                                     -Dbrowser=${params.browser} ^
                                     -Denvironment=${params.environment} ^
-                                    -Dheadless=${params.headless}
+                                    -Dheadless=${params.headless} ^
+                                    -DgridUrl=http://localhost:4444/wd/hub
                             """
                         } else {
                             error "Invalid test name selected: ${params.tests}"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T07:58:21 IST" name="Default suite" finished-at="2025-07-25T07:59:05 IST" duration-ms="43971">
+  <suite started-at="2025-07-25T08:04:09 IST" name="Default suite" finished-at="2025-07-25T08:04:37 IST" duration-ms="28432">
     <groups>
     </groups>
-    <test started-at="2025-07-25T07:58:21 IST" name="Default test" finished-at="2025-07-25T07:59:05 IST" duration-ms="43971">
+    <test started-at="2025-07-25T08:04:09 IST" name="Default test" finished-at="2025-07-25T08:04:37 IST" duration-ms="28432">
       <class name="com.tractorjunction.tests.UsedTractorListingTests">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:21 IST" name="setUp" finished-at="2025-07-25T07:58:23 IST" duration-ms="1813" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@7d3e8655]" started-at="2025-07-25T08:04:09 IST" name="setUp" finished-at="2025-07-25T08:04:11 IST" duration-ms="1761" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,167 +33,63 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:23 IST" name="setupPageObject" finished-at="2025-07-25T07:58:27 IST" duration-ms="3573" status="PASS">
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@7d3e8655]" started-at="2025-07-25T08:04:11 IST" name="setupPageObject" finished-at="2025-07-25T08:04:14 IST" duration-ms="3677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPageObject -->
-        <test-method signature="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:27 IST" name="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange" finished-at="2025-07-25T07:58:29 IST" duration-ms="2289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:29 IST" name="tearDown" finished-at="2025-07-25T07:58:29 IST" duration-ms="206" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:29 IST" name="setUp" finished-at="2025-07-25T07:58:31 IST" duration-ms="1155" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:31 IST" name="setupPageObject" finished-at="2025-07-25T07:58:34 IST" duration-ms="2987" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupPageObject -->
-        <test-method signature="TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:34 IST" name="TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI" finished-at="2025-07-25T07:58:38 IST" duration-ms="4325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:38 IST" name="tearDown" finished-at="2025-07-25T07:58:38 IST" duration-ms="241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:38 IST" name="setUp" finished-at="2025-07-25T07:58:39 IST" duration-ms="1107" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:39 IST" name="setupPageObject" finished-at="2025-07-25T07:58:42 IST" duration-ms="2765" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupPageObject -->
-        <test-method signature="TJWA_TC_UTL_003_verifyYearFilter_2025()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:42 IST" name="TJWA_TC_UTL_003_verifyYearFilter_2025" finished-at="2025-07-25T07:58:44 IST" duration-ms="1880" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TJWA_TC_UTL_003_verifyYearFilter_2025 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:44 IST" name="tearDown" finished-at="2025-07-25T07:58:44 IST" duration-ms="230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:44 IST" name="setUp" finished-at="2025-07-25T07:58:45 IST" duration-ms="1189" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:45 IST" name="setupPageObject" finished-at="2025-07-25T07:58:48 IST" duration-ms="2858" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupPageObject -->
-        <test-method signature="TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:48 IST" name="TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter" finished-at="2025-07-25T07:58:52 IST" duration-ms="3580" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:52 IST" name="tearDown" finished-at="2025-07-25T07:58:52 IST" duration-ms="192" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:52 IST" name="setUp" finished-at="2025-07-25T07:58:53 IST" duration-ms="1163" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:53 IST" name="setupPageObject" finished-at="2025-07-25T07:58:56 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupPageObject -->
-        <test-method signature="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:56 IST" name="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted" finished-at="2025-07-25T07:59:05 IST" duration-ms="9004" status="PASS">
+        <test-method signature="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@7d3e8655]" started-at="2025-07-25T08:04:14 IST" name="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted" finished-at="2025-07-25T08:04:37 IST" duration-ms="22582" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.cssSelector: .hotDeal-tractor-price (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65519/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bba7e9db42d629be80447a46adf5f1e9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.cssSelector: .hotDeal-tractor-price (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 138.0.7204.159, chrome: {chromedriverVersion: 138.0.7204.168 (3e8d82e86e9..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65519/devtoo..., se:cdpVersion: 138.0.7204.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bba7e9db42d629be80447a46adf5f1e9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.tractorjunction.tests.UsedTractorListingTests.TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted(UsedTractorListingTests.java:109)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:59:05 IST" name="tearDown" finished-at="2025-07-25T07:59:05 IST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@7d3e8655]" started-at="2025-07-25T08:04:37 IST" name="tearDown" finished-at="2025-07-25T08:04:37 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

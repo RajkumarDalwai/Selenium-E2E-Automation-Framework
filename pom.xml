@@ -92,26 +92,25 @@
 </build>
 
 <profiles>
+   <!-- For running a specific test class -->
     <profile>
         <id>single-test</id>
-        <activation>
-            <property>
-                <name>test</name>
-            </property>
-        </activation>
+        <activation><activeByDefault>false</activeByDefault></activation>
         <build>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
                     <configuration>
                         <includes>
-                            <include>${test}</include>
+                            <include>${test}.java</include>
                         </includes>
                         <systemPropertyVariables>
                             <browser>${browser}</browser>
                             <environment>${environment}</environment>
                             <headless>${headless}</headless>
+                            <gridUrl>${gridUrl}</gridUrl>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
@@ -119,18 +118,16 @@
         </build>
     </profile>
 
+    <!-- For running suites normally (local CI) -->
     <profile>
         <id>suite</id>
-        <activation>
-            <property>
-                <name>testng.suiteXmlFile</name>
-            </property>
-        </activation>
+        <activation><activeByDefault>false</activeByDefault></activation>
         <build>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
                     <configuration>
                         <suiteXmlFiles>
                             <suiteXmlFile>${testng.suiteXmlFile}</suiteXmlFile>
@@ -145,6 +142,35 @@
             </plugins>
         </build>
     </profile>
+
+    <!-- For parallel execution on Selenium Grid -->
+    <profile>
+        <id>grid-parallel</id>
+        <activation><activeByDefault>false</activeByDefault></activation>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${testng.suiteXmlFile}</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <parallel>classes</parallel>
+                        <threadCount>3</threadCount>
+                        <systemPropertyVariables>
+                            <browser>${browser}</browser>
+                            <environment>${environment}</environment>
+                            <headless>${headless}</headless>
+                            <gridUrl>${gridUrl}</gridUrl>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+    
 </profiles>
 
 </project>
