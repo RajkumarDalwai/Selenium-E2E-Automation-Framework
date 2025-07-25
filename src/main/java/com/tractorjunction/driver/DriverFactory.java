@@ -39,7 +39,8 @@ public class DriverFactory {
                     		    "--disable-gpu", 
                     		    "--no-sandbox", 
                     		    "--disable-dev-shm-usage",
-                    		    "--remote-allow-origins=*"
+                    		    "--remote-allow-origins=*",
+                    		    "--disable-geolocation"
                     		);
                     } else {
                         chromeOptions.addArguments("--start-maximized");

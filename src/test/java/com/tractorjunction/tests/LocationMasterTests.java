@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.tractorjunction.base.BaseTest;
 import com.tractorjunction.pages.LocationMasterPage;
 import com.tractorjunction.utils.DropdownValidator;
+import com.tractorjunction.utils.TestUtils;
 
 public class LocationMasterTests extends BaseTest {
 
@@ -30,7 +31,7 @@ public class LocationMasterTests extends BaseTest {
         DropdownValidator.validateStateDropdown("english", page.stateDropdownOptions);
     }
 
-  /*  @Test
+    @Test
     public void validateStates_AllBrands_Hindi() {
         getDriver().get(baseUrl + "hi/all-brands/");
         wait.until(ExpectedConditions.elementToBeClickable(page.secondBrandTractorCard)).click();   
@@ -105,5 +106,5 @@ public class LocationMasterTests extends BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(page.emiCalcTractorCard)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(page.stateDropdownOptions));
         DropdownValidator.validateStateDropdown("english", page.stateDropdownOptions);
-    }*/
+    }
 }

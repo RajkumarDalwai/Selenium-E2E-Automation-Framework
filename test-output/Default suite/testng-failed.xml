@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tractorjunction.tests.EMICalculatorTests">
+      <class name="com.tractorjunction.tests.UsedTractorListingTests">
         <methods>
-          <include name="TC_001_verifyEmiCalculationWithDefaultDownPayment"/>
+          <include name="TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI"/>
+          <include name="setupPageObject"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="TJWA_TC_UTL_003_verifyYearFilter_2025"/>
+          <include name="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted"/>
         </methods>
-      </class> <!-- com.tractorjunction.tests.EMICalculatorTests -->
+      </class> <!-- com.tractorjunction.tests.UsedTractorListingTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

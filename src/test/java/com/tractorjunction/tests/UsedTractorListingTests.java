@@ -8,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,7 +43,7 @@ public class UsedTractorListingTests extends BaseTest {
         }
     }
 
-  /*  @Test
+    @Test
     public void TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI() {
         page.applyBrandModelFilter_Mahindra_575DI();
 
@@ -139,5 +140,5 @@ public class UsedTractorListingTests extends BaseTest {
         }
 
         Assert.assertTrue(page.arePricesSortedLowToHigh(), "❌ Prices not sorted Low to High.");
-    }*/
+    }
 }

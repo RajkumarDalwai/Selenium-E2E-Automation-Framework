@@ -13,32 +13,46 @@ import com.tractorjunction.pages.LanguageSwitcherPage;
 public class LanguageSwitcherTests extends BaseTest {
 
     @Test
-    public void testLanguageSwitchingFunctionality() {
+    public void testHindiLanguageSwitching() {
         LanguageSwitcherPage languageSwitcherPage = new LanguageSwitcherPage(getDriver());
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
-        // Hindi
         getDriver().get(baseUrl);
         languageSwitcherPage.openLanguageDropdown();
         languageSwitcherPage.selectHindi();
         wait.until(ExpectedConditions.urlToBe("https://www.tractorjunction.com/hi/"));
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://www.tractorjunction.com/hi/", "Hindi URL mismatch");
+    }
 
-        // Telugu
+    @Test
+    public void testTeluguLanguageSwitching() {
+        LanguageSwitcherPage languageSwitcherPage = new LanguageSwitcherPage(getDriver());
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
         getDriver().get(baseUrl);
         languageSwitcherPage.openLanguageDropdown();
         languageSwitcherPage.selectTelugu();
         wait.until(ExpectedConditions.urlToBe("https://www.tractorjunction.com/te/"));
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://www.tractorjunction.com/te/", "Telugu URL mismatch");
+    }
 
-        // Tamil
+    @Test
+    public void testTamilLanguageSwitching() {
+        LanguageSwitcherPage languageSwitcherPage = new LanguageSwitcherPage(getDriver());
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
         getDriver().get(baseUrl);
         languageSwitcherPage.openLanguageDropdown();
         languageSwitcherPage.selectTamil();
         wait.until(ExpectedConditions.urlToBe("https://www.tractorjunction.com/ta/"));
         Assert.assertEquals(getDriver().getCurrentUrl(), "https://www.tractorjunction.com/ta/", "Tamil URL mismatch");
+    }
 
-        // Marathi
+    @Test
+    public void testMarathiLanguageSwitching() {
+        LanguageSwitcherPage languageSwitcherPage = new LanguageSwitcherPage(getDriver());
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
         getDriver().get(baseUrl);
         languageSwitcherPage.openLanguageDropdown();
         languageSwitcherPage.selectMarathi();

@@ -1,5 +1,8 @@
 package com.tractorjunction.tests;
 
+import java.io.File;
+
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.tractorjunction.base.BaseTest;
@@ -19,7 +22,7 @@ public class LeadFormTests extends BaseTest {
         LeadFormHelper.submitLeadForm(getDriver(), page, 0);
     } 
 
-  /*  @Test
+    @Test
     public void TJWA_TC_LNT_002() {
         LeadFormPage page = new LeadFormPage(getDriver());
         getDriver().get(baseUrl);
@@ -206,5 +209,5 @@ public class LeadFormTests extends BaseTest {
         page.suhPincodeInput.sendKeys("591265");
         page.suhFinalSubmit.click();
         TestUtils.sleep(2000);
-    }*/
+    }
 }

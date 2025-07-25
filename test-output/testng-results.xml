@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T00:16:35 IST" name="Default suite" finished-at="2025-07-25T00:16:46 IST" duration-ms="11236">
+  <suite started-at="2025-07-25T07:58:21 IST" name="Default suite" finished-at="2025-07-25T07:59:05 IST" duration-ms="43971">
     <groups>
     </groups>
-    <test started-at="2025-07-25T00:16:35 IST" name="Default test" finished-at="2025-07-25T00:16:46 IST" duration-ms="11236">
-      <class name="com.tractorjunction.tests.EMICalculatorTests">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@6933b6c6]" started-at="2025-07-25T00:16:35 IST" name="setUp" finished-at="2025-07-25T00:16:38 IST" duration-ms="2865" status="PASS">
+    <test started-at="2025-07-25T07:58:21 IST" name="Default test" finished-at="2025-07-25T07:59:05 IST" duration-ms="43971">
+      <class name="com.tractorjunction.tests.UsedTractorListingTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:21 IST" name="setUp" finished-at="2025-07-25T07:58:23 IST" duration-ms="1813" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,15 +33,171 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_001_verifyEmiCalculationWithDefaultDownPayment()[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@6933b6c6]" started-at="2025-07-25T00:16:38 IST" name="TC_001_verifyEmiCalculationWithDefaultDownPayment" finished-at="2025-07-25T00:16:46 IST" duration-ms="7817" status="PASS">
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:23 IST" name="setupPageObject" finished-at="2025-07-25T07:58:27 IST" duration-ms="3573" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001_verifyEmiCalculationWithDefaultDownPayment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.EMICalculatorTests@6933b6c6]" started-at="2025-07-25T00:16:46 IST" name="tearDown" finished-at="2025-07-25T00:16:46 IST" duration-ms="263" status="PASS">
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:27 IST" name="TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange" finished-at="2025-07-25T07:58:29 IST" duration-ms="2289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_001_verifyUsedTractorPricesIn0to2LakhRange -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:29 IST" name="tearDown" finished-at="2025-07-25T07:58:29 IST" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tractorjunction.tests.EMICalculatorTests -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:29 IST" name="setUp" finished-at="2025-07-25T07:58:31 IST" duration-ms="1155" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:31 IST" name="setupPageObject" finished-at="2025-07-25T07:58:34 IST" duration-ms="2987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:34 IST" name="TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI" finished-at="2025-07-25T07:58:38 IST" duration-ms="4325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_002_verifyBrandModelFilter_Mahindra575DI -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:38 IST" name="tearDown" finished-at="2025-07-25T07:58:38 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:38 IST" name="setUp" finished-at="2025-07-25T07:58:39 IST" duration-ms="1107" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:39 IST" name="setupPageObject" finished-at="2025-07-25T07:58:42 IST" duration-ms="2765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_003_verifyYearFilter_2025()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:42 IST" name="TJWA_TC_UTL_003_verifyYearFilter_2025" finished-at="2025-07-25T07:58:44 IST" duration-ms="1880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_003_verifyYearFilter_2025 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:44 IST" name="tearDown" finished-at="2025-07-25T07:58:44 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:44 IST" name="setUp" finished-at="2025-07-25T07:58:45 IST" duration-ms="1189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:45 IST" name="setupPageObject" finished-at="2025-07-25T07:58:48 IST" duration-ms="2858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:48 IST" name="TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter" finished-at="2025-07-25T07:58:52 IST" duration-ms="3580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_004_verifySortByLowToHighAfterPriceFilter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:52 IST" name="tearDown" finished-at="2025-07-25T07:58:52 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:52 IST" name="setUp" finished-at="2025-07-25T07:58:53 IST" duration-ms="1163" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setupPageObject()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:53 IST" name="setupPageObject" finished-at="2025-07-25T07:58:56 IST" duration-ms="3004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPageObject -->
+        <test-method signature="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:58:56 IST" name="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted" finished-at="2025-07-25T07:59:05 IST" duration-ms="9004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tractorjunction.tests.UsedTractorListingTests@1f9e9475]" started-at="2025-07-25T07:59:05 IST" name="tearDown" finished-at="2025-07-25T07:59:05 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tractorjunction.tests.UsedTractorListingTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

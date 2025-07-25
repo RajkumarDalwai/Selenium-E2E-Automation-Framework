@@ -1,5 +1,6 @@
 package com.tractorjunction.tests;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -37,7 +38,7 @@ public class SeoElementsTests extends BaseTest {
         );
     }
 
-  /*  @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
+    @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test02_H2Validation(String lang, JSONObject langData) {
         load(langData);
         JSONArray expectedH2s = (JSONArray) langData.get("h2s");
@@ -118,5 +119,5 @@ public class SeoElementsTests extends BaseTest {
             seoPage.getCurrentUrl().contains(expectedUrl),
             "URL mismatch for lang: " + lang + ". Expected to contain: " + expectedUrl
         );
-    }*/
+    }
 }
