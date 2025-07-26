@@ -3,7 +3,6 @@ package com.tractorjunction.tests;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.tractorjunction.base.BaseTest;
@@ -11,25 +10,15 @@ import com.tractorjunction.pages.SeoElementsPage;
 
 public class SeoElementsTests extends BaseTest {
 
-    JSONObject currentLangData;
-    SeoElementsPage seoPage;
-
-    @BeforeMethod
-    public void setupPageObject() {
-        seoPage = new SeoElementsPage(getDriver());
-    }
-
-    // Store current language data and navigate to the test URL
     private void load(JSONObject langData) {
-        currentLangData = langData;
-        // Navigate to the test URL
         String testUrl = baseUrl + langData.get("url").toString();
         getDriver().get(testUrl);
-        System.out.println("Navigated to: " + testUrl); // Debug log
+        System.out.println("Thread: " + Thread.currentThread().getId() + " | Navigated to: " + testUrl);
     }
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test01_H1Validation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         Assert.assertEquals(
             seoPage.getH1Text(),
@@ -40,6 +29,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test02_H2Validation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         JSONArray expectedH2s = (JSONArray) langData.get("h2s");
         for (Object h2 : expectedH2s) {
@@ -52,6 +42,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test03_H3Validation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         if (langData.containsKey("h3s")) {
             JSONArray expectedH3s = (JSONArray) langData.get("h3s");
@@ -66,6 +57,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test04_MetaTitleValidation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         JSONObject meta = (JSONObject) langData.get("meta");
         String expectedTitle = meta.get("title").toString().trim();
@@ -78,6 +70,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test05_MetaDescriptionValidation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         JSONObject meta = (JSONObject) langData.get("meta");
         String expectedDescription = meta.get("description").toString().trim();
@@ -90,6 +83,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test06_MetaKeywordsValidation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         JSONObject meta = (JSONObject) langData.get("meta");
         String expectedKeywords = meta.get("keywords").toString().trim();
@@ -102,6 +96,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test07_BreadcrumbValidation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         String expectedBreadcrumb = langData.get("breadcrumb").toString().trim();
         Assert.assertEquals(
@@ -113,6 +108,7 @@ public class SeoElementsTests extends BaseTest {
 
     @Test(dataProvider = "seoData", dataProviderClass = com.tractorjunction.utils.DataProviderUtils.class)
     public void test08_UrlStructureValidation(String lang, JSONObject langData) {
+        SeoElementsPage seoPage = new SeoElementsPage(getDriver());
         load(langData);
         String expectedUrl = langData.get("url").toString().trim();
         Assert.assertTrue(
