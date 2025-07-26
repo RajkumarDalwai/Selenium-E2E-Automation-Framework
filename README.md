@@ -8,6 +8,7 @@ A robust End-to-End (E2E) automation testing framework built using **Selenium**,
 * ✅ Parallel execution via Selenium Grid
 * ✅ Multi-environment support (Test / UAT / Prod)
 * ✅ Smoke and Regression Test Suites
+* ✅ Allure Reporting
 
 It currently automates **85 test cases** covering key functional areas of the application.
 
