@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tractorjunction.tests.UsedTractorListingTests">
+      <class name="com.tractorjunction.tests.LeadFormTests">
         <methods>
-          <include name="setupPageObject"/>
+          <include name="TJWA_TC_LSU_010"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="TJWA_TC_UTL_006_combinedFilters_2to3Lakh_Mahindra_2011_Sorted"/>
         </methods>
-      </class> <!-- com.tractorjunction.tests.UsedTractorListingTests -->
+      </class> <!-- com.tractorjunction.tests.LeadFormTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

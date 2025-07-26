@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.tractorjunction.base.BaseTest;
 import com.tractorjunction.pages.PageRedirectionPage;
+import com.tractorjunction.utils.ExcelReader;
 import com.tractorjunction.utils.LinkValidator;
 
 public class PageRedirectionTests extends BaseTest {
@@ -17,12 +18,12 @@ public class PageRedirectionTests extends BaseTest {
         validator = new LinkValidator(getDriver());
     }
 
-  /*  @Test
+    @Test
     public void validateAllLinksOnHeaders() {
         getDriver().get(baseUrl);
         page = new PageRedirectionPage(getDriver());
         validator.validateLinks(page.headerLinks);
-    } */
+    } 
 
     @Test
     public void validateAllLinksOnFooter() {
@@ -31,7 +32,7 @@ public class PageRedirectionTests extends BaseTest {
         validator.validateLinks(page.footerLinks);
     }
 
-  /*  @Test
+    @Test
     public void validateAllLinksOnHomePage() {
         getDriver().get(baseUrl);
         page = new PageRedirectionPage(getDriver());
@@ -94,6 +95,6 @@ public class PageRedirectionTests extends BaseTest {
         }
 
         validator.printValidationSummary();       // ✅ Updated method name
-    }*/
+    }
 
 }
