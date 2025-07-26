@@ -146,6 +146,7 @@
     <!-- For parallel execution on Selenium Grid -->
 <profile>
     <id>grid-parallel</id>
+    <activation><activeByDefault>false</activeByDefault></activation>
     <build>
         <plugins>
             <plugin>
@@ -154,13 +155,13 @@
                 <version>3.2.5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>${testng.suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                     <parallel>methods</parallel>
-                    <threadCount>${threadCount}</threadCount> <!-- ✅ Correctly placed -->
+                    <threadCount>5</threadCount> <!-- ✅ Fixed thread count -->
                     <systemPropertyVariables>
-                        <environment>${environment}</environment>
                         <browser>${browser}</browser>
+                        <environment>${environment}</environment>
                         <headless>${headless}</headless>
                         <gridUrl>${gridUrl}</gridUrl>
                     </systemPropertyVariables>
