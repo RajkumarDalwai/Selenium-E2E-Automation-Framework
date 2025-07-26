@@ -18,16 +18,33 @@ pipeline {
                 bat 'java -version'
             }
         }
+
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
         stage('Checkout') {
             steps {
                 checkout scm
+                // OR, use this if needed:
+                // git url: 'https://github.com/RajkumarDalwai/Selenium-E2E-Automation-Framework.git'
             }
         }
+
+        stage('Verify Image Exists') {
+            steps {
+                bat 'dir src\\main\\resources\\test-data\\atlassian.png'
+            }
+        }
+
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
             }
         }
+
         stage('Test Execution') {
             steps {
                 script {

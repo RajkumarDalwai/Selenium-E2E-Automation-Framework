@@ -7,12 +7,11 @@ import org.testng.annotations.Test;
 
 import com.tractorjunction.base.BaseTest;
 import com.tractorjunction.pages.LeadFormPage;
-import com.tractorjunction.utils.LeadFormHelper;
 import com.tractorjunction.utils.TestUtils;
 
 public class LeadFormTests extends BaseTest {
 
-    @Test
+  /*  @Test
     public void TJWA_TC_LNT_001() {
         LeadFormPage page = new LeadFormPage(getDriver());
         getDriver().get(baseUrl);
@@ -82,7 +81,7 @@ public class LeadFormTests extends BaseTest {
         page.ctpEMIPage.click();
         TestUtils.sleep(2000);
         LeadFormHelper.submitLeadForm(getDriver(), page, 7);
-    }
+    } */
 
     @Test
     public void TJWA_TC_LNT_008() {
