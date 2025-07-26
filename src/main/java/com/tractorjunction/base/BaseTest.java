@@ -26,11 +26,18 @@ public class BaseTest {
 
         boolean runHeadless = Boolean.parseBoolean(headless);
 
-        // Load env-specific config
+        System.out.printf("[BaseTest] Starting test on thread: %s, browser: %s, headless: %s, grid: %s, env: %s%n",
+                Thread.currentThread().getName(), browser, headless, gridUrl, environment);
+
         config = new ConfigReader(environment);
         baseUrl = config.getProperty("baseUrl");
 
         WebDriver driver = DriverFactory.createDriver(browser, runHeadless, gridUrl);
+
+        if (driver == null) {
+            throw new RuntimeException("Driver is null. Check Selenium Grid setup.");
+        }
+
         driver.manage().window().setSize(new Dimension(1920, 1080));
         DriverManager.setDriver(driver);
     }
