@@ -50,15 +50,15 @@ pipeline {
                     if (params.testSuite != 'None' && params.tests == 'None') {
                         def suiteXml = "testng/testng-${params.testSuite}.xml"
                         def profile = params.runOnGrid ? "grid-parallel" : "suite"
-                        def extraParams = params.runOnGrid ? "-DgridUrl=http://localhost:4444/wd/hub -DsuiteXmlFile=${suiteXml}" : "-Dtestng.suiteXmlFile=${suiteXml}"
 
                         bat """
                             mvn test ^
                                 -P${profile} ^
-                                ${extraParams} ^
+                                -Dtestng.suiteXmlFile=${suiteXml} ^
                                 -Dbrowser=${params.browser} ^
                                 -Denvironment=${params.environment} ^
-                                -Dheadless=${params.headless}
+                                -Dheadless=${params.headless} ^
+                                ${params.runOnGrid ? "-DgridUrl=http://localhost:4444/wd/hub" : ""}
                         """
                     } else if (params.tests != 'None' && params.testSuite == 'None') {
                         def fullTestName = testNameMap[params.tests]
